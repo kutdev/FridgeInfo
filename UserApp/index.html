@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="KutDev">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4cb5ded24e.js" crossorigin="anonymous"></script>
+     
+    <title>FridgeInfo</title>
+</head>
+<body>
+    <section id="top-menu">
+        <h1>FridgeInfo<p>.online</p></h1>
+        <p>By KutDev</p>
+    </section>
+    <div id="title">
+        <h1 id="welcomeText"></h1>
+    </div>
+    <div id="categories">
+        <div onclick="meatOpen()" id="cat">
+            <h2>Meat</h2>
+            <img src="https://img.icons8.com/office/80/000000/steak-rare.png"/>
+        </div>
+        <div onclick="fishOpen()" id="cat">
+            <h2 >Fish</h2>
+            <img src="https://img.icons8.com/ios-filled/50/000000/top-view-fish.png"/>
+        </div>
+        <div onclick="vegeOpen()" id="cat">
+            <h2>Vegetable</h2>
+            <img src="https://img.icons8.com/external-photo3ideastudio-flat-photo3ideastudio/64/000000/external-vegetable-supermarket-photo3ideastudio-flat-photo3ideastudio.png"/>
+        </div>
+        <div onclick="frutOpen()" id="cat">
+            <h2>Fruit</h2>
+            <img src="https://img.icons8.com/external-flat-andi-nur-abdillah/64/000000/external-Fruit-nutrition-(flat)-flat-andi-nur-abdillah.png"/>
+        </div>
+        <div onclick="stufOpen()" id="cat">
+            <h2>Other Stuffs</h2>
+            <img src="https://img.icons8.com/external-flat-andi-nur-abdillah/64/000000/external-Fridge-hotel-(flat)-flat-andi-nur-abdillah.png"/>
+        </div>
+    </div>
+    <center>
+    <div class="fridgeMenu" id="meatMenu">
+        <h3>Meat</h3>
+        <input class="productInput" type="text" id="meatProduct" placeholder="Enter product"><input class="amountInput" type="number" id="meatAmount" placeholder="kg"> <i onclick="enterMeat()" class="fa-solid fa-plus"></i>
+    </div>
+    </center>
+    <center>
+    <div class="fridgeMenu" id="fishMenu">
+        <h3>Fish</h3>
+        <input class="productInput" type="text" id="fishProduct" placeholder="Enter product"><input class="amountInput" type="number" id="fishAmount" placeholder="kg"> <i onclick="enterFish()" class="fa-solid fa-plus"></i>
+    </div>
+    </center>
+    <center>
+    <div class="fridgeMenu" id="vegeMenu">
+        <h3>Vegatable</h3>
+        <input class="productInput" type="text" id="vegeProduct" placeholder="Enter product"><input class="amountInput" type="number" id="vegeAmount" placeholder="kg"> <i onclick="enterVege()" class="fa-solid fa-plus"></i>
+    </div>
+    </center>
+    <center>
+        <div class="fridgeMenu" id="frutMenu">
+            <h3>Fruit</h3>
+            <input class="productInput" type="text" id="frutProduct" placeholder="Enter product"><input class="amountInput" type="number" id="frutAmount" placeholder="kg"> <i onclick="enterFrut()" class="fa-solid fa-plus"></i>
+        </div>
+        </center>
+        <center>
+            <div class="fridgeMenu" id="stufMenu">
+                <h3>Other Stuffs</h3>
+                <input class="productInput" type="text" id="stufProduct" placeholder="Enter product"><input class="amountInput" type="number" id="stufAmount" placeholder="pcs."> <i onclick="enterStuf()" class="fa-solid fa-plus"></i>
+            </div>
+            </center>
+    <script src="script.js"></script>
+
+</body>
+</html>

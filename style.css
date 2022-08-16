@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F2F2F2;
+    font-family: 'Poppins',sans-serif;
+}
+#top-menu{
+    font-family: 'Poppins', sans-serif;
+}
+#top-menu h1{
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-align: center;
+    font-size: 45px;
+    max-width: 100%;
+}
+#top-menu p{
+    text-align: center;
+    font-size: 10px;
+}
+#start{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 150px;
+    max-width: 100%;
+
+}
+#start h1{
+    font-weight: 900;
+    width: 350px;
+    font-size: 50px;
+    margin-left: 20px;
+}
+#start input{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    border: 1px solid #272727;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 5px;
+}
+#start button{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #272727;
+    transition: all .7s;
+    color: #000;
+
+}
+#start button:hover{
+    color:#F2F2F2;
+    background-color: #000;
+    transition: all .7s;
+}
+#start .aboutLink{
+    margin-left: 20px;
+    color: #272727;
+}
