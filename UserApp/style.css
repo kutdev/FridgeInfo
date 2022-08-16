@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F2F2F2;
+    font-family: 'Poppins',sans-serif;
+}
+#top-menu{
+    font-family: 'Poppins', sans-serif;
+}
+#top-menu h1{
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-align: center;
+    font-size: 45px;
+    max-width: 100%;
+}
+#top-menu p{
+    text-align: center;
+    font-size: 10px;
+}
+#categories{
+    margin-top: 100px;
+}
+#cat{
+    margin-left: 10px;
+    border: 2px solid #272727;
+    background-color: #F2F2F2;
+    width: 40%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    float: left;
+    margin-bottom: 20px;
+    height: 150px;
+    transition: all 1s;
+
+}
+#welcomeText{
+    margin-top: 70px;
+}
+.fridgeMenu{
+    position: absolute;
+    z-index: 700;
+    text-align: center;
+    background-color: #272727;
+    color: #F2F2F2;
+    width: 70%;
+    height: 700px;
+    margin-left: 50px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+.fridgeMenu .productInput{
+    background-color: transparent;
+    color: #F2F2F2;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px;
+    padding: 2px;
+    margin-right: 5px;
+    width: 100px;
+}
+.fridgeMenu .amountInput{
+    background-color: transparent;
+    color: #F2F2F2;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px;
+    padding: 2px;
+    margin-right: 5px;
+    width: 30px;
+    margin-left: 5px;
+}
+.fridgeMenu i{
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    padding: 3px;
+}
+.fridgeMenu p{
+    margin-top: 10px;
+}
+#cat:hover{
+    color: #F2F2F2;
+    background-color: #272727;
+    border: 2px solid #B7D8;
+    transition: all 1s;
+}

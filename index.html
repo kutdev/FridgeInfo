@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="fridgeinfo, buzdolabı uygulaması, buzdolabı, refrigerator, fridge, FridgeInfo, Kühlschrank, Informationen zum Kühlschrank, info, fridge info, fridge information ">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="KutDev">
+    <meta name="description" content="FridgeInfo is fully free refrigerator information web app. You can easily know your refrigerators capacity from anywhere. There is no e-mail, phone number or account required you just need to enter your name and choose your language! " >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4cb5ded24e.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">  
+    <title>FridgeInfo</title>
+</head>
+<body>
+    <section id="top-menu">
+        <h1>FridgeInfo<p>.online</p></h1>
+        <p>By KutDev</p>
+    </section>
+    <div id="start">
+        <a class="aboutLink" href="UserApp/aboutApp.html">System Details</a>
+        <h1>Let's start by taking your name!</h1>
+        <p>Also, you must choose your language!</p>
+        <div id="buttons">
+        <button class="langBtn" onclick="langEn()">EN</button>
+        <button class="langBtn"  onclick="langTr()">TR</button>
+        <button class="langBtn"  onclick="langDe()">DE</button>
+        </div>
+       <br> <input type="text" id="nameText" placeholder="Your Name">
+        <br><button class="logBtn" onclick="nameBtn()"><i class="fa-solid fa-thumbs-up"></i></button>
+    </div>
+    <script>
+        var userEntered = localStorage.getItem("entered");
+        var trLang = 0;
+        var enLang = 0;
+        var deLang = 0;
+        if (userEntered == 1) {
+            window.location = "UserApp/";
+        }
+        function nameBtn(){
+            var userName = document.getElementById("nameText").value;
+            let emptyPlace = 0;
+            let emptyLang = 0;
+            if (userName.length < 2) {
+                emptyPlace = 1;
+                
+            }
+            if (trLang == 0 && enLang == 0 && deLang == 0) {
+                emptyLang = 1;
+
+            }
+            if (emptyPlace == 0 && emptyLang == 0) {
+                if (trLang == 1) {
+                    localStorage.setItem("language", "tr")
+                }
+                else if (enLang == 1) {
+                    localStorage.setItem("language", "en")
+                }
+                else if (deLang == 1) {
+                    localStorage.setItem("language", "de")
+                }
+                
+                localStorage.setItem("name", userName );
+            localStorage.setItem("entered", 1 );
+            window.location = "UserApp/";
+            }
+             if(emptyPlace == 1){
+                Swal.fire(
+                    'Are you sure? ',
+                    "Let's try to enter name which is more longer than 2 letters",
+                    'info'
+                )
+            }
+            if(emptyLang == 1){
+                Swal.fire(
+                    'Choose language! ',
+                    "You must choose language",
+                    'info'
+                )
+            }
+            
+            
+
+        }
+        function langEn(){
+            enLang = 1;
+            deLang = 0;
+            trLang = 0;
+            
+            return enLang, deLang, trLang
+            
+        }
+        function langTr(){
+            trLang = 1;
+            deLang = 0;
+            enLang = 0;
+            return enLang, deLang, trLang
+            
+        }
+        function langDe(){
+            deLang = 1;
+            trLang = 0;
+            enLang = 0;
+            return enLang, deLang, trLang
+        }
+    </script>
+</body>
+</html>
